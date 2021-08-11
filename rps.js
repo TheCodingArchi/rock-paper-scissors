@@ -3,9 +3,16 @@ let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
+function getHumanPlay() {
+    let humanPlay = prompt("Please enter one of rock, paper or scissors to play");
+    let humanPlaySelection = humanPlay.toLowerCase();
+
+    return humanPlaySelection;
+}
+
 function getComputerPlay() {
     let computerPlay = (Math.floor(Math.random() * 10)) % 3;
-
+    
     if (computerPlay === 0) {
         return 'rock';
     }
@@ -13,13 +20,7 @@ function getComputerPlay() {
         return 'paper';
     }
     return 'scissors';
-}
 
-function getHumanPlay() {
-    let humanPlay = prompt("Please enter one of rock, paper or scissors to play");
-    let humanPlaySelection = humanPlay.toLowerCase();
-
-    return humanPlaySelection;
 }
 
 function displaySelection (playerSelection, computerSelection) {
@@ -51,6 +52,7 @@ function displayRoundWinner(player, computer) {
     else {
         winningState = 'It\'s a tie!';
     }
+
     return winningState;
 }
 
@@ -82,28 +84,43 @@ function playRound() {
     let selection = displaySelection(playerSelection, computerSelection);
     let scoreBoard = displayScore(playerScore, computerScore);
 
-    return `${selection}\n${roundWinner}\n${scoreBoard}`;
+    if (playerSelection !== 'rock' || playerSelection !== 'paper' || playerSelection !== 'scissors') {
+        return;
+    }
+    else {
+        return `${selection}\n${roundWinner}\n${scoreBoard}`;
+    }
 }
 
 // Plays 5 rounds of game or break when one player gets to 3
 function playGame() {
     for (let i = 0; i < 5; i++) {
         console.log(playRound());
+
+        if (playerSelection !== 'rock' || playerSelection !== 'paper' || playerSelection !== 'scissors') {
+            break;
+        }
         if (playerScore === 3 || computerScore === 3) {
             break;
         }
     }
 
-    console.log(`Final Score - Player: ${playerScore} Computer: ${computerScore}`);
-    
-    if (playerScore > computerScore) {
-        console.log('Congratulations! You won the game!');
+    if (playerSelection !== 'rock' || playerSelection !== 'paper' || playerSelection !== 'scissors') {
+        console.log('Wrong input. Enter rock, paper, or scissors')
     }
-    else if (playerScore < computerScore) {
-        console.log('Sorry, you lost. Better luck next time!');
-    }
+
     else {
-        console.log('The game ends in a tie!');
+        console.log(`Final Score - Player: ${playerScore} Computer: ${computerScore}`);
+        
+        if (playerScore > computerScore) {
+            console.log('Congratulations! You won the game!');
+        }
+        else if (playerScore < computerScore) {
+            console.log('Sorry, you lost. Better luck next time!');
+        }
+        else {
+            console.log('The game ends in a tie!');
+        }
     }
 }
 
