@@ -72,6 +72,7 @@ function displayScore(playerScore, computerScore) {
     return `PlayerScore: ${playerScore} ComputerScore: ${computerScore}`;
 }
 
+// Plays one round of game
 function playRound() {
     playerSelection = getHumanPlay();
     computerSelection = getComputerPlay();
@@ -84,9 +85,13 @@ function playRound() {
     return `${selection}\n${roundWinner}\n${scoreBoard}`;
 }
 
+// Plays 5 rounds of game or break when one player gets to 3
 function playGame() {
     for (let i = 0; i < 5; i++) {
         console.log(playRound());
+        if (playerScore === 3 || computerScore === 3) {
+            break;
+        }
     }
 
     console.log(`Final Score - Player: ${playerScore} Computer: ${computerScore}`);
