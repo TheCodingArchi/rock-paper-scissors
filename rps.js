@@ -84,43 +84,28 @@ function playRound() {
     let selection = displaySelection(playerSelection, computerSelection);
     let scoreBoard = displayScore(playerScore, computerScore);
 
-    if (playerSelection !== 'rock' || playerSelection !== 'paper' || playerSelection !== 'scissors') {
-        return;
-    }
-    else {
-        return `${selection}\n${roundWinner}\n${scoreBoard}`;
-    }
+    return `${selection}\n${roundWinner}\n${scoreBoard}`;
 }
 
 // Plays 5 rounds of game or break when one player gets to 3
 function playGame() {
     for (let i = 0; i < 5; i++) {
         console.log(playRound());
-
-        if (playerSelection !== 'rock' || playerSelection !== 'paper' || playerSelection !== 'scissors') {
-            break;
-        }
         if (playerScore === 3 || computerScore === 3) {
             break;
         }
     }
-
-    if (playerSelection !== 'rock' || playerSelection !== 'paper' || playerSelection !== 'scissors') {
-        console.log('Wrong input. Enter rock, paper, or scissors')
-    }
-
-    else {
-        console.log(`Final Score - Player: ${playerScore} Computer: ${computerScore}`);
+    
+    console.log(`Final Score - Player: ${playerScore} Computer: ${computerScore}`);
         
-        if (playerScore > computerScore) {
-            console.log('Congratulations! You won the game!');
-        }
-        else if (playerScore < computerScore) {
-            console.log('Sorry, you lost. Better luck next time!');
-        }
-        else {
-            console.log('The game ends in a tie!');
-        }
+    if (playerScore > computerScore) {
+        console.log('Congratulations! You won the game!');
+    }
+    else if (playerScore < computerScore) {
+        console.log('Sorry, you lost. Better luck next time!');
+    }
+    else {
+        console.log('The game ends in a tie!');
     }
 }
 
