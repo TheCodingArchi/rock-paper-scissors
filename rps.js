@@ -4,7 +4,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function getHumanPlay() {
-    let humanPlay = prompt("Please enter one of rock, paper or scissors to play");
+    let humanPlay = window.prompt("Please enter one of rock, paper or scissors to play");
     let humanPlaySelection = humanPlay.toLowerCase();
 
     return humanPlaySelection;
@@ -20,7 +20,6 @@ function getComputerPlay() {
         return 'paper';
     }
     return 'scissors';
-
 }
 
 function displaySelection (playerSelection, computerSelection) {
@@ -78,13 +77,17 @@ function displayScore(playerScore, computerScore) {
 function playRound() {
     playerSelection = getHumanPlay();
     computerSelection = getComputerPlay();
-    let roundWinner = displayRoundWinner(playerSelection, computerSelection);
-    playerScore = getPlayerScore(roundWinner);
-    computerScore = getComputerScore(roundWinner);
-    let selection = displaySelection(playerSelection, computerSelection);
-    let scoreBoard = displayScore(playerScore, computerScore);
 
-    return `${selection}\n${roundWinner}\n${scoreBoard}`;
+    if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
+        let roundWinner = displayRoundWinner(playerSelection, computerSelection);
+        playerScore = getPlayerScore(roundWinner);
+        computerScore = getComputerScore(roundWinner);
+        let selection = displaySelection(playerSelection, computerSelection);
+        let scoreBoard = displayScore(playerScore, computerScore);
+    
+        return `${selection}\n${roundWinner}\n${scoreBoard}`;
+    }
+    return 'Wrong input. Please enter rock, paper or scissors';
 }
 
 // Plays 5 rounds of game or break when one player gets to 3
