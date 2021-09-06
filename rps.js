@@ -1,25 +1,21 @@
-let playerSelection;
-let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
 function getHumanPlay() {
-    let humanPlay = window.prompt("Please enter one of rock, paper or scissors to play");
-    let humanPlaySelection = humanPlay.toLowerCase();
-
-    return humanPlaySelection;
+    let humanPlay = '';
+    while (true) {
+        humanPlay = prompt("Please, enter one of rock, paper or scissors to play").toLowerCase();
+        if (humanPlay === 'rock' || humanPlay === 'paper' || humanPlay === 'scissors') {
+            break;
+        }
+    }
+    return humanPlay;
 }
 
 function getComputerPlay() {
-    let computerPlay = (Math.floor(Math.random() * 10)) % 3;
-    
-    if (computerPlay === 0) {
-        return 'rock';
-    }
-    else if (computerPlay === 1) {
-        return 'paper';
-    }
-    return 'scissors';
+    const CHOICES = ['rock', 'paper', 'scissors'];
+    let randomNumber = Math.floor(Math.random() * 3);
+    return CHOICES[randomNumber];
 }
 
 function displaySelection (playerSelection, computerSelection) {
@@ -75,19 +71,15 @@ function displayScore(playerScore, computerScore) {
 
 // Plays one round of game
 function playRound() {
-    playerSelection = getHumanPlay();
-    computerSelection = getComputerPlay();
-
-    if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
-        let roundWinner = displayRoundWinner(playerSelection, computerSelection);
-        playerScore = getPlayerScore(roundWinner);
-        computerScore = getComputerScore(roundWinner);
-        let selection = displaySelection(playerSelection, computerSelection);
-        let scoreBoard = displayScore(playerScore, computerScore);
+    let playerSelection = getHumanPlay();
+    let computerSelection = getComputerPlay();
+    let roundWinner = displayRoundWinner(playerSelection, computerSelection);
+    playerScore = getPlayerScore(roundWinner);
+    computerScore = getComputerScore(roundWinner);
+    let selection = displaySelection(playerSelection, computerSelection);
+    let scoreBoard = displayScore(playerScore, computerScore);
     
-        return `${selection}\n${roundWinner}\n${scoreBoard}`;
-    }
-    return 'Wrong input. Please enter rock, paper or scissors';
+    return `${selection}\n${roundWinner}\n${scoreBoard}`;
 }
 
 // Plays 5 rounds of game or break when one player gets to 3
