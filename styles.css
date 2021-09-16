@@ -8,17 +8,14 @@
   header {
     display: flex;
     padding: 25px 25px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     justify-content: space-between;
     background-color: #001219;
     color: #ffffff;
-    border-bottom: 3px solid #005F73;
+    border-bottom: 5px solid #005F73;
   }
 
   a.github {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border: 1px solid #0A9396;
     border-radius: 2px;
     width: 75px;
@@ -35,6 +32,7 @@
   .game-center {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
   }
 
   .playing-board {
@@ -45,14 +43,11 @@
   }
 
   .display-board {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: #005F73;
     margin-bottom: 25px;
   }
   
-  .players-label, .score-board, .selection {
+  a.github, .display-board, .players-label, .score-board, .selection {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +71,7 @@
   .player-selection {
     border: 1px solid #0A9396;
     color: #005F73;
+    transition: all 0.5s ease;
   }
 
   .computer-selection {
@@ -91,8 +87,20 @@
     background-color: #005F73;
     color: #ffffff;
     cursor: pointer;
+    box-shadow: 0 0 0.5rem #0A9396;
   }
 
   .computer-selection:hover {
     cursor: not-allowed;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    background-color: #005F73;
+    color: #ffffff;
+    padding: 5px 5px 5px;
+    text-align: left;
   }
