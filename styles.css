@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif
+  }
+
+  header {
+    display: flex;
+    padding: 25px 25px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    background-color: #001219;
+    color: #ffffff;
+    border-bottom: 3px solid #005F73;
+  }
+
+  .github {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #0A9396;
+    border-radius: 2px;
+    width: 75px;
+    padding: 0 5px;
+    background-color: #005F73;
+  }
