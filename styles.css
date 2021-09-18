@@ -77,6 +77,7 @@
   .computer-selection {
     border: 1px solid #CBCBCB;
     color: #CBCBCB;
+    transition: all 0.5s ease;
   }
 
   .player-selection > p, .computer-selection > p {
@@ -104,3 +105,42 @@
     padding: 5px 5px 5px;
     text-align: left;
   }
+
+  /* Javascript triggered styles */
+  .selected {
+    transform: scale(1.1);
+  }
+
+  .win-green {
+    color: #0A9396;
+    border-color: #0A9396;
+  }
+
+  .lose-red {
+    color: #AE2012;
+    border-color: #AE2012;
+  }
+
+  .tie-black {
+    color: #001219;
+    border-color: #001219;
+  }
+
+  .win-green:hover, .lose-red:hover, .tie-black:hover {
+    background-color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: 0 0 0;
+  }
+
+  .win-green:hover {
+    color: #0A9396;
+  }
+
+  .lose-red:hover {
+    color: #AE2012;
+  }
+
+  .tie-black:hover {
+    color: #001219;
+  }
+
