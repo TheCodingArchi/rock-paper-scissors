@@ -53,6 +53,10 @@
     align-items: center;
   }
 
+  .player-score, .computer-score {
+    padding-left: 5px;
+  }
+
   .fas {
     padding-right: 10px;
   }
@@ -69,12 +73,14 @@
   }
 
   .player-selection {
+    background-color: #ffffff;
     border: 1px solid #0A9396;
     color: #005F73;
     transition: all 0.5s ease;
   }
 
   .computer-selection {
+    background-color: #ffffff;
     border: 1px solid #CBCBCB;
     color: #CBCBCB;
     transition: all 0.5s ease;
@@ -82,6 +88,7 @@
 
   .player-selection > p, .computer-selection > p {
     font-weight: bold;
+    font-size: medium;
   }
 
   .player-selection:hover {
@@ -142,5 +149,59 @@
 
   .tie-black:hover {
     color: #001219;
+  }
+
+  .disable-click {
+    border: 1px solid #CBCBCB;
+    color: #CBCBCB;
+  }
+
+  .disable-click:hover {
+    background-color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: 0 0 0;
+    color: #CBCBCB;
+  }
+
+  .popup-box {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    padding: 10px 10px;
+    width: 80%;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 12px -5px rgba(0,0,0,0.3);
+  }
+
+  .popup-box div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .popup-box p {
+    line-height: 1.5;
+  }
+
+  .popup-box button {
+    background-color: #0A9396;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border-radius: 2px;
+    border: 1px solid #005F73;
+    cursor: pointer;
+  }
+
+  .popup-box-win {
+    border-left: 10px solid #0A9396;
+  }
+
+  .popup-box-lose {
+    border-left: 10px solid #AE2012;
   }
 
