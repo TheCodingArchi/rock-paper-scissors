@@ -253,6 +253,10 @@
     .player-selection p, .computer-selection p {
       font-size: 1em;
     }
+
+    .popup-box p {
+      font-size: 0.8em;
+    }
   }
 
   @media screen and (max-width: 540px) {
