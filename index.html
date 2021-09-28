@@ -9,15 +9,19 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Rock Paper Scissors</h1>
         <a href="https://github.com/TheCodingArchi/rock-paper-scissors" class="github">
-            <i class="fab fa-github"></i>
-            <p>github</p>
+            <i class="fab fa-github fa-2x"></i>
         </a>
     </header>
+    <!-- Main Content -->
     <main>
+        <p>First To 5 Wins</p>
+
         <section class="game-center">
+            <!-- Player's play board -->
             <div class="playing-board">
                 <div class="display-board">
                     <div class="players-label">
@@ -31,19 +35,21 @@
                 </div>
                 <div class="selection">
                     <button id="rock" class="player-selection">
-                        <i class="far fa-hand-rock fa-9x"></i>
+                        <i class="far fa-hand-rock fa-8x"></i>
                         <p>Rock</p>
                     </button>
                     <button id="paper" class="player-selection">
-                        <i class="far fa-hand-paper fa-9x"></i>
+                        <i class="far fa-hand-paper fa-8x"></i>
                         <p>Paper</p>
                     </button>
                     <button id="scissors" class="player-selection">
-                        <i class="far fa-hand-scissors fa-9x"></i>
+                        <i class="far fa-hand-scissors fa-8x"></i>
                         <p>Scissors</p>
                     </button>
                 </div>
             </div>
+
+            <!-- Computer's play board -->
             <div class="playing-board">
                 <div class="display-board">
                     <div class="players-label">
@@ -57,20 +63,22 @@
                 </div>
                 <div class="selection">
                     <button id="rock" class="computer-selection">
-                        <i class="far fa-hand-rock fa-9x"></i>
+                        <i class="far fa-hand-rock fa-8x"></i>
                         <p>Rock</p>
                     </button>
                     <button id="paper" class="computer-selection">
-                        <i class="far fa-hand-paper fa-9x"></i>
+                        <i class="far fa-hand-paper fa-8x"></i>
                         <p>Paper</p>
                     </button>
                     <button id="scissors" class="computer-selection">
-                        <i class="far fa-hand-scissors fa-9x"></i>
+                        <i class="far fa-hand-scissors fa-8x"></i>
                         <p>Scissors</p>
                     </button>
                 </div>
             </div>
         </section>
+
+        <!-- Table to display round play and results -->
         <section class="round-history">
             <table>
                 <tr>
@@ -82,10 +90,12 @@
             </table>
         </section>
     </main>
+
+    <!-- Javascript Triggered popup box -->
     <div class="popup-box">
         <div>
             <p></p>
-            <button>Play Again</button>
+            <button>Play Again ?</button>
         </div>
     </div>
 </body>
