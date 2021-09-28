@@ -1,3 +1,6 @@
+/* ================================
+  GENERAL STYLES
+================================ */
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +8,12 @@
     font-family:sans-serif
   }
 
+  /* ===============================
+    MAIN STYLES
+  =============================== */
   header {
     display: flex;
     padding: 25px 25px;
-    margin-bottom: 10px;
     justify-content: space-between;
     background-color: #001219;
     color: #ffffff;
@@ -16,17 +21,25 @@
   }
 
   a.github {
-    border: 1px solid #0A9396;
-    border-radius: 2px;
-    width: 75px;
-    padding: 0 5px;
     text-decoration: none;
     color: #ffffff;
-    background-color: #005F73;
+  }
+
+  a.github i {
+    border-top: 2px solid #005F73;
+    border-right: 2px solid #005F73;
+    border-left: 2px solid #005F73;
+    border-radius: 50%;
   }
 
   main {
     padding: 25px 25px;
+  }
+
+  main > p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #001219;
   }
 
   .game-center {
@@ -98,6 +111,10 @@
     box-shadow: 0 0 0.5rem #0A9396;
   }
 
+  .player-selection:active {
+    outline: none;
+  }
+
   .computer-selection:hover {
     cursor: not-allowed;
   }
@@ -109,11 +126,19 @@
   th {
     background-color: #005F73;
     color: #ffffff;
-    padding: 5px 5px 5px;
+    padding: 5px 10px;
     text-align: left;
   }
 
-  /* Javascript triggered styles */
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #94D2BD;
+  }
+
+  /* ============================= 
+  JAVASCRIPT TRIGERRED STYLES
+  ============================= */
   .selected {
     transform: scale(1.1);
   }
@@ -205,3 +230,58 @@
     border-left: 10px solid #AE2012;
   }
 
+  /* ===================================
+    MEDIA QUERIES
+  =================================== */
+  @media screen and (max-width: 1024px) {
+    h2 {
+      font-size: 1em;
+    }
+    
+    .playing-board {
+      width: 45%;
+    }
+
+    .game-center .far {
+      font-size: 5em;
+    }
+
+    .game-center .fas {
+      font-size: 1.5em;
+    }
+
+    .player-selection p, .computer-selection p {
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
+
+    .game-center {
+      flex-direction: column;
+      height: 50%;
+    }
+
+    .playing-board {
+      width: 100%;
+    }
+
+    .game-center .far {
+        font-size: 5em;
+    }
+
+    .game-center .fas {
+      font-size: 1.5em;
+    }
+
+    th {
+      font-size: 0.8em;
+    }
+  }
