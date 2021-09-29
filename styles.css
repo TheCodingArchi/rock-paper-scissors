@@ -13,7 +13,7 @@
   =============================== */
   header {
     display: flex;
-    padding: 25px 25px;
+    padding: 10px 25px;
     justify-content: space-between;
     background-color: #001219;
     color: #ffffff;
@@ -216,6 +216,7 @@
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
+    width: 150px;
     padding: 10px 10px;
     border-radius: 2px;
     border: 1px solid #005F73;
@@ -253,10 +254,6 @@
     .player-selection p, .computer-selection p {
       font-size: 1em;
     }
-
-    .popup-box p {
-      font-size: 0.8em;
-    }
   }
 
   @media screen and (max-width: 540px) {
@@ -287,5 +284,15 @@
 
     th {
       font-size: 0.8em;
+    }
+
+    .popup-box div {
+      flex-direction: column;
+    }
+
+    .popup-box p {
+      font-size: 0.8em;
+      margin-bottom: 10px;
+      text-align: center;
     }
   }
