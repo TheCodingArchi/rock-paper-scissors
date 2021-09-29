@@ -102,7 +102,7 @@ function removeAnimation(e) {
 }
 
 function displayRoundResults(player, computer) {
-    const resultTable = document.querySelector('table');
+    const resultTableBody = document.querySelector('tbody');
 
     const tableRow = document.createElement('tr');
     const round = document.createElement('td');
@@ -133,7 +133,7 @@ function displayRoundResults(player, computer) {
     tableRow.appendChild(ai);
     tableRow.appendChild(roundWinner);
 
-    resultTable.appendChild(tableRow);
+    resultTableBody.insertAdjacentElement('afterbegin', tableRow);
 }
 
 function disableSelection(selections) {
@@ -166,7 +166,7 @@ function displayGameWinner() {
 }
 
 function resetTable() {
-    const rows = document.querySelectorAll('table > tbody ~ tr');
+    const rows = document.querySelectorAll('tbody > tr');
     rows.forEach((row) => {
         row.parentNode.removeChild(row);
     });
