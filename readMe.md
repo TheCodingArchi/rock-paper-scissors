@@ -8,8 +8,12 @@
 - Final game winner is displayed in a pop up box with a button to restart game.
 
 ## Demo Gifs
+- Winning
 ![Won](gifs/winner.gif)
 
+
+
+- Losing
 ![Lost](gifs/loser.gif)
 
 See Demo link here https://thecodingarchi.github.io/rock-paper-scissors/
