@@ -1,10 +1,15 @@
 # Rock, Paper, Scissors.
 - This project is created as part of submissions for The Odin Project
 
-## Play at the console
-- First iteration is a Rock, Paper, Scissors that is played entirely at the console.
-- This iteration plays a round of 5 games.
-- First to 3 or winner over 5 rounds wins.
-- If you came in contact with this project before a UI is added, On Chrome - Press control + shift + J (for windows/linux) or cmd + opt + J (for MacOS). On FireFox - Press control + shift + j (for windows/linux) or cmd + shift + J (for MacOS).
-- Enter playGame(); at the console to begin.
-See link here https://thecodingarchi.github.io/rock-paper-scissors/
+## Features
+- Player and computer selections are animated to reflect selections per round.
+- Results per round are displayed in a nicely formatted table with the most recent result at the top of table
+- The table also uses icons to show player and computer selections per round
+- Final game winner is displayed in a pop up box with a button to restart game.
+
+## Demo Gifs
+![Won](gifs/winner.gif)
+
+![Lost](gifs/loser.gif)
+
+See Demo link here https://thecodingarchi.github.io/rock-paper-scissors/
