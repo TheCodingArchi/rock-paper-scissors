@@ -9,11 +9,11 @@
 
 ## Demo Gifs
 - Winning
-![Won](gifs/winner.gif)
+- ![Won](gifs/winner.gif)
 
 
 
 - Losing
-![Lost](gifs/loser.gif)
+- ![Lost](gifs/loser.gif)
 
 See Demo link here https://thecodingarchi.github.io/rock-paper-scissors/
